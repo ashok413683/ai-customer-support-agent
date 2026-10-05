@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="🤖"
 )
 
-st.title("🤖 AI Customer Support Agent")
+st.title("🤖 AR Support Agent")
 st.write("Ask your question and our AI assistant will help you.")
 
 # Customer details
