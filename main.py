@@ -8,7 +8,7 @@ from langchain_chroma import Chroma
 
 from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage, AIMessage
 from tools import create_support_ticket
-
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 load_dotenv()
 
@@ -44,10 +44,13 @@ llm_with_tools = llm.bind_tools(tools)
 # Embeddings
 # -------------------------
 
-embeddings = OllamaEmbeddings(
-    model="qwen3-embedding:8b"
-)
+# embeddings = OllamaEmbeddings(
+#     model="qwen3-embedding:8b"
+# )
 
+embeddings = GoogleGenerativeAIEmbeddings(
+    model="gemini-embedding-001"
+)
 
 # -------------------------
 # Chroma

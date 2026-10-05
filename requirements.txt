@@ -9,3 +9,4 @@ langchain-ollama
 langchain-chroma
 streamlit
 requests
+langchain-google-genai

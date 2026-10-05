@@ -1,6 +1,10 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_ollama import OllamaEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_chroma import Chroma
 
 
@@ -22,9 +26,9 @@ chunks = splitter.split_documents(documents)
 print("Chunks:", len(chunks))
 
 
-# 3. Create embeddings
-embeddings = OllamaEmbeddings(
-    model="qwen3-embedding:8b"
+# 3. Create Gemini embeddings
+embeddings = GoogleGenerativeAIEmbeddings(
+    model="gemini-embedding-001"
 )
 
 
