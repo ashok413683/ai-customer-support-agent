@@ -57,7 +57,7 @@ if user_message:
     try:
 
         response = requests.post(
-            "http://127.0.0.1:8000/chat",
+            "https://ai-customer-support-agent-g3q1.onrender.com/chat",
             json=payload
         )
 
